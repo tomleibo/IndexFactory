@@ -1,0 +1,32 @@
+{
+  "name": "index-factory",
+  "version": "0.0.1",
+  "description": "Automatically generates indices for MongoDb based on previous usage. Reads slow queries from the profiling info collection, parses, optimizes and prints a list of createIndex commands.",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/collectionTests.js && node tests/mongoIndexTests.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomleibo/IndexFactory.git"
+  },
+  "keywords": [
+    "Mongo",
+    "MongoDB",
+    "Index"
+  ],
+  "author": "Tom Leibovich",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tomleibo/IndexFactory/issues"
+  },
+  "homepage": "https://github.com/tomleibo/IndexFactory#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  }
+}

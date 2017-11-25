@@ -1,0 +1,15 @@
+{
+    "host": "localhost",
+    "port": 27017,
+    "dbname": "Kerberos",
+    "authenticate": false,
+    "dbUser": "",
+    "dbPass": "",
+    "adminDbUser": "",
+    "adminDbPass": "",
+    "dbhost":"127.0.0.1",
+    "dbport": "27017",
+    "slow": 10,
+    "expressPort":3000,
+    "connectionOptions": {"ssl":false, "sslValidate" :false, "checkServerIdentity" :false, "autoReconnect" :true}
+}
