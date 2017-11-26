@@ -48,8 +48,8 @@ Call the `/` route of the server.
 The results will be shown in the browser.
 
 ## Dependencies
-##### Express version 2.2.33
-##### MongoDb's node driver version 2.2: `https://mongodb.github.io/node-mongodb-native/`
+- Express version 2.2.33
+- MongoDb's node driver version 2.2: `https://mongodb.github.io/node-mongodb-native/`
 
 ## Tests
 The tests are still very basic and simple, no framework was used either.
