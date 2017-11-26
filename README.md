@@ -11,8 +11,11 @@ After a sufficient amount of queries have been run, sending a request to the ser
 ##### Using npm
 Note that the code can be downloaded without the node_modules directory and `npm install` can be used, but a little fix in the MongoDB driver is required, in order to query the profiling info collection of the database the driver is currently connected to, and not the admin database's profiling collection. 
 To do that open `node_modules/mongodb/lib/admin.js` and replace this line:
+
 ``` self.s.topology.cursor("admin.system.profile", { find: 'system.profile', query: {}}, {}).toArray(callback); ```
+
 With this:
+
 ``` self.s.topology.cursor(self.s.db.databaseName+".system.profile", { find: 'system.profile', query: {}}, {}).toArray(callback); ```
 
 ### 2. Configure the project 
@@ -31,7 +34,7 @@ Open `config.json` and change the configuration keys according to your environme
 
 ### Optional step - Delete the current prolfiling info
 The index creation is based on logged queries, therefore any previously logged queries will also be used to create indices.
-This can be done by running these commands:
+This can be done by running these commands in the Mongo shell:
 ```
 db.setProfilingLevel(0)
 db.system.profile.drop()
